@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.punchcyber</groupId>
     <version>0.1-SNAPSHOT</version>
-    <artifactId>artemis</artifactId>
+    <artifactId>pakhet</artifactId>
     <packaging>jar</packaging>
     
-    <name>Artemis Streaming</name>
+    <name>Pakhet Streaming</name>
     <description>A streaming data pipeline underpinned by Apache Apex</description>
     
     <repositories>
@@ -345,6 +345,11 @@
             <groupId>org.pcap4j</groupId>
             <artifactId>pcap4j-packetfactory-static</artifactId>
             <version>${pcap4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>1.17</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
