@@ -13,8 +13,6 @@
 
 package com.punchcyber.pakhet.datatypes;
 
-import java.io.Serializable;
-
 public enum SupportedFileType {
     GZIP, TAR, ZIP, BZIP2, PCAP, EVTX, UNSUPPORTED
 }

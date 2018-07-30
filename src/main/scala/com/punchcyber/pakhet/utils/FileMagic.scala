@@ -21,7 +21,6 @@ import org.apache.commons.compress.archivers.{ArchiveEntry, ArchiveInputStream, 
 import org.apache.commons.compress.compressors.{CompressorInputStream, CompressorStreamFactory}
 
 import scala.collection.immutable.HashMap
-import scala.collection.mutable
 import scala.util.control.Breaks.{break, breakable}
 
 object FileMagic {
@@ -79,7 +78,7 @@ object FileMagic {
     }
     
     @throws[UnsupportedEncodingException] // TODO: do a better exception...this is close enough for the next 30 seconds...30, 29, 28, 27 ...
-    def recursiveFindFileType(names: mutable.Set[SupportedFileType], is:InputStream): Option[Boolean] = {
+    def recursiveFindFileType(names: Array[SupportedFileType], is:InputStream): Option[Boolean] = {
         val bis: BufferedInputStream = new BufferedInputStream(is)
     
         val fileBytes: Array[Byte] = new Array[Byte](512)

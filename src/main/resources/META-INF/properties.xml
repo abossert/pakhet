@@ -1,12 +1,40 @@
 <?xml version="1.0"?>
 <configuration>
-  <property>
-    <name>apex.application.MyFirstApplication.operator.randomGenerator.prop.numTuples</name>
-    <value>1000</value>
-  </property>
-  <property>
-    <name>apex.application.MyFirstApplication.operator.console.prop.stringFormat</name>
-    <value>hello world: %s</value>
-  </property>
+    <property>
+        <name>dt.loggers.level</name>
+        <value>org.apache.apex.*:WARN,org.apache.*:WARN,com.punchcyber.*:WARN</value>
+    </property>
+    <property>
+        <name>apex.attr.MASTER_MEMORY_MB</name>
+        <value>32768</value>
+    </property>
+    <property>
+        <name>apex.application.Pakhet.operator.*.attr.MEMORY_MB</name>
+        <value>16384</value>
+    </property>
+    <!--HdfsFileInput-->
+    <property>
+        <name>apex.application.Pakhet.operator.HdfsEvtxFileInput.prop.core_conf_file</name>
+        <value>/etc/hadoop/2.6.2.0-205/0/core-site.xml</value>
+    </property>
+    <property>
+        <name>apex.application.Pakhet.operator.HdfsEvtxFileInput.prop.hdfs_conf_file</name>
+        <value>/etc/hadoop/2.6.2.0-205/0/hdfs-site.xml</value>
+    </property>
+    <property>
+        <name>apex.application.Pakhet.operator.HdfsEvtxFileInput.prop.directoryString</name>
+        <value>hdfs://ingest/Avatar|Avatar</value>
+    </property>
+    <property>
+        <name>apex.application.Pakhet.operator.HdfsEvtxFileInput.prop.scanIntervalMillis</name>
+        <value>60000</value>
+    </property>
+    <property>
+        <name>apex.application.Pakhet.operator.HdfsEvtxFileInput.prop.emitBatchSize</name>
+        <value>1000</value>
+    </property>
+    
+    
+    <!--hdfs://ingest/Aladdin|Aladdin,-->
 </configuration>
 

@@ -11,16 +11,12 @@
  * permission from Punch Cyber Analytics Group
  */
 
-package com.punchcyber.pakhet
+package com.punchcyber.pakhet.datatypes
 
-import com.datatorrent.api.annotation.ApplicationAnnotation
-import com.datatorrent.api.{DAG, StreamingApplication}
-import org.apache.hadoop.conf.Configuration
+import org.apache.hadoop.hbase.client.Put
 
-@ApplicationAnnotation(name = "Pakhet")
-class PakhetApp extends StreamingApplication {
+abstract class Pudable {
+    def getHBaseTableName: String
     
-    override def populateDAG(dag: DAG, configuration: Configuration): Unit = {
-    
-    }
+    def getHBasePut: Put
 }

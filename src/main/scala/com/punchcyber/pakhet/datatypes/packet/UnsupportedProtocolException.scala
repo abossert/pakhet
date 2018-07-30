@@ -11,16 +11,6 @@
  * permission from Punch Cyber Analytics Group
  */
 
-package com.punchcyber.pakhet
+package com.punchcyber.pakhet.datatypes.packet
 
-import com.datatorrent.api.annotation.ApplicationAnnotation
-import com.datatorrent.api.{DAG, StreamingApplication}
-import org.apache.hadoop.conf.Configuration
-
-@ApplicationAnnotation(name = "Pakhet")
-class PakhetApp extends StreamingApplication {
-    
-    override def populateDAG(dag: DAG, configuration: Configuration): Unit = {
-    
-    }
-}
+class UnsupportedProtocolException extends IllegalArgumentException {}

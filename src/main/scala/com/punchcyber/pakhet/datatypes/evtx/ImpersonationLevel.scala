@@ -11,16 +11,21 @@
  * permission from Punch Cyber Analytics Group
  */
 
-package com.punchcyber.pakhet
+package com.punchcyber.pakhet.datatypes.evtx
 
-import com.datatorrent.api.annotation.ApplicationAnnotation
-import com.datatorrent.api.{DAG, StreamingApplication}
-import org.apache.hadoop.conf.Configuration
-
-@ApplicationAnnotation(name = "Pakhet")
-class PakhetApp extends StreamingApplication {
-    
-    override def populateDAG(dag: DAG, configuration: Configuration): Unit = {
-    
-    }
+object ImpersonationLevel {
+    val impersonationLevel: Map[String,String] = Map[String,String](
+        "%%1832" -> "Identification",
+        "%%1833" -> "Impersonation",
+        "%%1840" -> "Delegation",
+        "%%1841" -> "Denied by Process Trust Label ACE",
+        "%%1842" -> "Yes",
+        "%%1843" -> "No",
+        "%%1844" -> "System",    
+        "%%1845" -> "Not Available",
+        "%%1846" -> "Default",
+        "%%1847" -> "DisallowMmConfig",
+        "%%1848" -> "Off",
+        "%%1849" -> "Auto"
+    )
 }
