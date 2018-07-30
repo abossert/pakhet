@@ -12,7 +12,7 @@
         <name>apex.application.Pakhet.operator.*.attr.MEMORY_MB</name>
         <value>16384</value>
     </property>
-    <!--HdfsFileInput-->
+    <!--HdfsEvtxFileInput-->
     <property>
         <name>apex.application.Pakhet.operator.HdfsEvtxFileInput.prop.core_conf_file</name>
         <value>/etc/hadoop/2.6.2.0-205/0/core-site.xml</value>
@@ -33,8 +33,27 @@
         <name>apex.application.Pakhet.operator.HdfsEvtxFileInput.prop.emitBatchSize</name>
         <value>1000</value>
     </property>
+    <!--HdfsPcapFileInput-->
+    <property>
+        <name>apex.application.Pakhet.operator.HdfsPcapFileInput.prop.core_conf_file</name>
+        <value>/etc/hadoop/2.6.2.0-205/0/core-site.xml</value>
+    </property>
+    <property>
+        <name>apex.application.Pakhet.operator.HdfsPcapFileInput.prop.hdfs_conf_file</name>
+        <value>/etc/hadoop/2.6.2.0-205/0/hdfs-site.xml</value>
+    </property>
+    <property>
+        <name>apex.application.Pakhet.operator.HdfsPcapFileInput.prop.directoryString</name>
+        <value>hdfs://ingest/Aladdin|Aladdin</value>
+    </property>
+    <property>
+        <name>apex.application.Pakhet.operator.HdfsPcapFileInput.prop.scanIntervalMillis</name>
+        <value>60000</value>
+    </property>
+    <property>
+        <name>apex.application.Pakhet.operator.HdfsPcapFileInput.prop.emitBatchSize</name>
+        <value>1000</value>
+    </property>
     
-    
-    <!--hdfs://ingest/Aladdin|Aladdin,-->
 </configuration>
 
